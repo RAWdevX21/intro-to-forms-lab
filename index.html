@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            background-color: rgb(230, 230, 243);
+            color: rgb(3, 3, 39);
+            margin: 0px;
+        }
+        h1 {
+            color: rgb(86, 8, 21);
+        }
+        content {
+            margin: 10px auto;
+
+        }
+    </style>
+</head>
+<body style="margin: 10px;">
+    <h1>Payment Form</h1>
+    <form>
+    <p>
+        Required fields are marked by *
+    </p>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <!-- Radio Button Grouping -->
+        <div>
+            <label>
+                Mx.<br>
+                <input type="radio" id="neutral-mix" name="prefix"  value="Mx." checked/><br>
+            </label>
+            <label>
+                Mr.<br>
+                <input type="radio" id="neutral-m" name="prefix"  value="Mr."/><br>
+            </label>
+            <label>
+                Ms.<br>
+                <input type="radio" id="neutral-w" name="prefix"  value="Ms."/><br>
+            </label>
+            <label>
+                Mrs.<br>
+                <input type="radio" id="neutral-w" name="prefix"  value="Ms."/><br>
+            </label>
+            <label>Name<br>
+                <input type="text" id="name" required autocomplete="name"/>
+            </label><br>
+                <label>Email<br>
+                    <input type="text" id="email" required autocomplete="email"/>
+                </label>
+        </div>
+    </fieldset>
+        <fieldset><legend>Payment Information</legend>
+            <label>
+                <select id ="card-type" name="c"><optgroup label="credit card type">
+                    <option value="visa">Visa
+                    <option value="mastercard">Mastercard
+                    <option value="american-express">American Express
+                    <option value="discover">Discover
+                </select><br>
+                <p><span>Credit Card Number*</span><br>
+                <input name=cc-number type=tel placeholder="xxxx xxxx xxxx xxxx" required></p>
+            </label>
+            <label>Expiration Date*<br>
+                <input id="expiration-date" name=cc-exp type=tel placeholder="MM / YY" required>
+            </label>              
+        </fieldset>
+            <input type=submit value="Submit Payment" style="margin: 2px;"> 
+    </form>
+</html>
